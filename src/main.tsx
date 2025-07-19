@@ -4,8 +4,8 @@ import "../src/assets/styles/reset.css"
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import MainLayout from './app/layouts/MainLayout'
 import UserProfile from './pages/UserProfile'
-import HomePage from './pages/HomePage'
-import MyModels from './pages/MyModels'
+import Models from './pages/Models'
+import Cart from './pages/Cart'
 
 
 createRoot(document.getElementById('root')!).render(
@@ -13,9 +13,9 @@ createRoot(document.getElementById('root')!).render(
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<MainLayout />}>
-          <Route index element={<HomePage />} />
+          <Route index element={<Models />} />
           <Route path="profile" element={<UserProfile />} />
-          <Route path="my-models" element={<MyModels />} />
+          <Route path="cart" element={<Cart />} />
         </Route>
       </Routes>
     </BrowserRouter>
