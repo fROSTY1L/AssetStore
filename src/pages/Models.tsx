@@ -1,7 +1,7 @@
-const MyModels = () => {
+const Models = () => {
     return (
         <div>My Models</div>
     )
 }
 
-export default MyModels
+export default Models

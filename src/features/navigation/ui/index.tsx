@@ -1,4 +1,4 @@
-import { AppstoreOutlined, HomeOutlined, UserOutlined } from '@ant-design/icons'
+import { AppstoreOutlined, ShoppingCartOutlined, UserOutlined } from '@ant-design/icons'
 import { Menu } from 'antd'
 import { useLocation, useNavigate } from 'react-router-dom';
 
@@ -16,21 +16,22 @@ const Navigation = () => {
         theme="dark" 
         mode="horizontal" 
         defaultSelectedKeys={[path]}
+        disabledOverflow
         style={{ justifyContent: "center"}}
         >
         <Menu.Item 
         style={MenuItemStyle} 
         icon={<AppstoreOutlined />} 
-        onClick={() => navigate("/my-models")}
-        key={"/my-models"}>
-            My models
+        onClick={() => navigate("/")}
+        key={"/models"}>
+            Models
         </Menu.Item>
         <Menu.Item 
         style={MenuItemStyle} 
-        icon={<HomeOutlined />} 
-        onClick={() => navigate("/")}
-        key={"/"}>
-            Home
+        icon={<ShoppingCartOutlined />} 
+        onClick={() => navigate("/cart")}
+        key={"/cart"}>
+            Cart
         </Menu.Item>
         <Menu.Item 
         style={MenuItemStyle} 
@@ -38,7 +39,7 @@ const Navigation = () => {
         onClick={() => navigate("/profile")}
         key={"/profile"}>
             Profile
-        </Menu.Item>
+        </Menu.Item> 
     </Menu>
   )
 }
