@@ -4,8 +4,10 @@ import { Avatar, Flex, Typography } from 'antd'
 const { Text } = Typography;
 
 const UserInfo = () => {
+  /*TODO: Изменить после деплоя бека */
   const userName = "Albert Flores";
   const userID = "nazdarq"
+
   return (
       <Flex vertical align={"center"} style={{ width: "100%" }}>
         <Avatar size={64} icon={<UserOutlined/>}/>

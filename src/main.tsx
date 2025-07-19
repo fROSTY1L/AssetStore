@@ -2,10 +2,10 @@ import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import "../src/assets/styles/reset.css"
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
-import MainLayout from './components/layouts/MainLayout'
-import HomePage from './components/pages/HomePage'
-import UserProfile from './components/pages/UserProfile'
-import MyModels from './components/pages/MyModels'
+import MainLayout from './app/layouts/MainLayout'
+import UserProfile from './pages/UserProfile'
+import HomePage from './pages/HomePage'
+import MyModels from './pages/MyModels'
 
 
 createRoot(document.getElementById('root')!).render(
