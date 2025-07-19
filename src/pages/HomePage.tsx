@@ -1,5 +1,6 @@
-import ProductCard from "../ui/HomePage/ProductCard"
-import SearchInput from "../ui/HomePage/SearchInput"
+import ProductCard from "../features/home/products"
+import SearchInput from "../features/home/search"
+
 
 const HomePage = () => {
   return (
