@@ -1,5 +1,6 @@
 import { Tabs } from 'antd'
 import PurchasesList from '../../purchases'
+import ReviewList from '../../reviews/ui'
 
 const ProfileTabs = () => {
   return (
@@ -14,7 +15,8 @@ const ProfileTabs = () => {
             }, 
             {
                 label: "Reviews",
-                key: "reviews"
+                key: "reviews",
+                children: <ReviewList />
             },
         ]}
     />
