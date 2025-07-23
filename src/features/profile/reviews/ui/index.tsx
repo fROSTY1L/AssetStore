@@ -1,6 +1,9 @@
 import React from 'react';
 import Review from './Review';
 
+/* 
+  TODO: Поменять на RTK Query после написания бека
+*/
 const ReviewList: React.FC = () => {
   const comments = [
     {

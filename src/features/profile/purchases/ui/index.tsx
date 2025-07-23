@@ -1,9 +1,10 @@
-
 import { Card, Divider, Flex } from "antd";
 import Purchase from "./Purchase";
 import { mockPurchases } from "../../../../api/mock/purchases";
 
-
+/* 
+  TODO: Поменять на RTK Query после написания бека
+*/
 const PurchasesList = () => {
   return (
     <Flex vertical gap={8}>

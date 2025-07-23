@@ -32,7 +32,6 @@ const Review: React.FC<CommentProps> = ({
     <Card
       size="small"
       style={{ marginBottom: 16 }}
-      bodyStyle={{ padding: '12px 16px' }}
     >
       <Space size={12} align="start">
         <Avatar 
