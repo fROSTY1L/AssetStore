@@ -1,6 +1,6 @@
 import { Tabs } from 'antd'
 import PurchasesList from '../../purchases'
-import ReviewList from '../../reviews/ui'
+import ReviewList from '../../reviews'
 
 const ProfileTabs = () => {
   return (
