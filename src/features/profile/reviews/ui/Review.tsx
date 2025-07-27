@@ -8,6 +8,10 @@ dayjs.extend(relativeTime);
 
 const { Text, Paragraph } = Typography;
 
+/*
+  TODO: Изменить интерфейс в соответсвии с беком
+*/
+
 interface CommentProps {
   author: {
     name: string;

@@ -1,18 +1,9 @@
-import ModelCard from "../features/models/model-card"
-
-const modelData = {
-  authorAvatarUrl: "123",
-  name: "Author",
-  previewUrl: "avatar",
-  likes: 5,
-  dislikes: 2,
-  reviews: 6
-}
+import ModelsList from "../features/models/models-list/ui"
 
 const Models = () => {
     return (
-        <div style={{ padding: 24 }}>
-        <ModelCard {...modelData}/>   
+        <div style={{ padding: 24 }}> 
+        <ModelsList />
     </div>
     )
 }

@@ -1,18 +1,17 @@
 import { UserOutlined } from '@ant-design/icons'
 import { Avatar, Flex, Typography } from 'antd'
+import { useAuth } from '../../../auth/hooks/useAuth';
 
 const { Text } = Typography;
 
 const UserInfo = () => {
-  /*TODO: Изменить после деплоя бека */
-  const userName = "Albert Flores";
-  const userID = "nazdarq"
+  const { user } = useAuth();
 
   return (
       <Flex vertical align={"center"} style={{ width: "100%" }}>
         <Avatar size={64} icon={<UserOutlined/>}/>
-        <Text>{userName}</Text>
-        <Text type='secondary'>id: {userID}</Text>
+        <Text>{user?.username}</Text>
+        <Text type='secondary'>id: {user?.telegram_id}</Text>
       </Flex>
   )
 }
