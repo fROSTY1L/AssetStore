@@ -1,8 +1,12 @@
+import { ProtectedRoute } from "../features/auth/ui"
+
 const Cart = () => {
   return (
-    <div>
-      Cart
-    </div>
+    <ProtectedRoute>
+      <div>
+        Cart
+      </div>
+    </ProtectedRoute>
   )
 }
 
