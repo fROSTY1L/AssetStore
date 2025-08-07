@@ -1,7 +1,6 @@
 import { type ReactNode, useState, useEffect, useCallback, useRef } from 'react';
 import { AuthContext } from '../context';
 import type { AuthState, TelegramUser } from '../types';
-import { MOCK_USER } from '../mock-data/user';
 
 interface AuthProviderProps {
   children: ReactNode;
@@ -66,17 +65,24 @@ export const AuthProvider = ({
     initializedRef.current = true;
     setState(prev => ({ ...prev, isLoading: true, error: null }));
 
-    // Режим мок-данных - пропускаем запрос к серверу
-    if (enableFakeAuth) {
-      login(MOCK_USER);
-      return;
-    }
-
     try {
-      const requestPayload = {
-        initData: window.Telegram?.WebApp?.initData || '',
-        isDevMode: false
-      };
+      const requestPayload = enableFakeAuth
+        ? {
+            initData: JSON.stringify({
+              user: { 
+                id: "nazdarq", 
+                username: 'test_user_231',
+              },
+              hash: 'dev_mode_hash'
+            }),
+            isDevMode: true
+          }
+        : {
+            initData: window.Telegram?.WebApp?.initData || '',
+            isDevMode: false
+          };
+
+      console.log('Auth request payload:', requestPayload);
 
       const response = await fetch('http://localhost:3000/api/auth/telegram', {
         method: 'POST',
@@ -130,7 +136,6 @@ export const AuthProvider = ({
   }, [enableFakeAuth, login, state.user, state.error]);
 
   useEffect(() => {
-    // Инициализация аутентификации при монтировании
     const init = async () => {
       try {
         await initAuth();

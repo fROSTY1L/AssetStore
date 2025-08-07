@@ -7,7 +7,11 @@ const { Content, Footer } = Layout;
 
 const MainLayout: React.FC = () => (
     <Layout style={{ minHeight: "100vh" }}>
-        <Content style={{ padding: "24px" }}>
+        <Content 
+          style={{ 
+            padding: "8px", 
+            background: "#F9F9FD",
+            }}>
             <Outlet />
         </Content>
         <Footer style={{ 
